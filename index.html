@@ -328,6 +328,7 @@ a:hover { text-decoration-color: var(--text); }
 
   function run(raw) {
     var text = raw.trim();
+    if (text) log.textContent = '';   // elk nieuw commando vervangt de vorige uitvoer
     var echo = append(line(text, 'echo'));
     if (text) {
       history.push(text);
